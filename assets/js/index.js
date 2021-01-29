@@ -1,7 +1,7 @@
 let mainOffset = $("#main-div .row").offset();
 let aboutOffset = $("#about-div").offset();
-let skillsOffset = $("#skills-div #skills-row").offset();
-let portfolioOffset = $("#portfolio-div #portfolio-row").offset();
+let skillsOffset = $("#skills-div").offset();
+let portfolioOffset = $("#portfolio-div").offset();
 let contactOffset = $("#contact-row").offset();
 
 $("#main_links").on("mouseenter mouseleave", "li",function(){
@@ -32,6 +32,7 @@ $(".show-preview").on("click",function () {
 
 $("#close-iframe-btn").on("click",function () {
     $("#modal-div").removeClass("show-modal-div").addClass("modal-body")
+    $("iframe").removeAttr("src")
 })
 
 $(".navbar-brand").on("click", function () {
@@ -64,6 +65,12 @@ $("#contact-btn").on("click", function () {
         scrollLeft: contactOffset.left
     });
 })
+
+//Hide links menu
+$("#main_links a").on("click",function() {
+    $(".navbar-toggler").addClass("collapsed").attr("aria-expanded", false);
+    $("#navbarSupportedContent").removeClass("show");
+});
 
 
 //Typing and fade animation

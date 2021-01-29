@@ -214,10 +214,9 @@ p{
 }
 
 #map {
-    height: 100%;
-    /* The height is 400 pixels */
+    height: 350px;
     width: 100%;
-    /* The width is the width of the web page */
+    margin-bottom: 30px;
 }
 
 @media (min-width: 992px) {
@@ -270,6 +269,12 @@ p{
     }
     .skills-column li, .skills-column p{
         font-size: 20px;
+    }
+
+    #map {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 30px;
     }
 }
 
