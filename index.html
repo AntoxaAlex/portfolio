@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anton Pertsevoy | React, Node.js and more</title>
+      <link rel="shortcut icon" href="./assets/imgs/logo16px.png" type="image/png"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="assets/stylesheets/index.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8ee8b946fd.js" crossorigin="anonymous"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+
+    </script>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBTRZgfxB4dGWpJc2CFWYPghGSGfqm9d8&callback=initMap&libraries=&v=weekly"
+            defer
+    ></script>
+  </head>
+  <body>
+  <div id="modal-div" class="modal-body">
+    <div id="iframe-div">
+      <button id="close-iframe-btn" class="btn btn-sm btn-danger float-end">X</button>
+      <iframe src="https://your-trip.herokuapp.com/"></iframe>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img width="70px" src="assets/imgs/logo1.png"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul id="main_links" class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a id="about-btn" aria-current="page" href="#">
+              <i class="far fa-user"></i>
+              <p class="hideParagraph">About</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="skills-btn" aria-current="page" href="#">
+              <i class="fas fa-tasks"></i>
+              <p class="hideParagraph">Skills</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="folio-btn" aria-current="page" href="#">
+              <i class="far fa-folder-open"></i>
+              <p class="hideParagraph">Portfolio</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="contact-btn" aria-current="page" href="#">
+              <i class="far fa-paper-plane"></i>
+              <p class="hideParagraph">Contact</p>
+            </a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a aria-current="page" href="https://www.facebook.com/profile.php?id=100007033427095" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a aria-current="page" href="https://www.instagram.com/aaalexeevich/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a aria-current="page" href="https://www.linkedin.com/in/anton-pertsevoy-229074179/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a aria-current="page" href="https://vk.com/antoxalex" target="_blank">
+                <i class="fab fa-vk"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <header>
+      <div id="main-div">
+        <div class="row">
+          <div class="section-part col-12 col-lg-5">
+            <div class="headers-div">
+              <h1 id="header1"></h1>
+              <h1 id="header2"></h1>
+              <h2 id="header3"></h2>
+            </div>
+          </div>
+          <div id="header-image-div" class="d-none d-lg-block col-lg-7">
+            <img src="assets/imgs/logo1.png"/>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="about">
+      <div id="about-div">
+        <div class="row">
+          <div id="about-image-div" class="col-12 col-lg-6 order-1 order-lg-0">
+            <img src="assets/imgs/mainpng.png"/>
+          </div>
+          <div class="section-part col-12 col-lg-6 order-0 order-lg-1">
+            <div class="headers-div">
+              <h1>About me</h1>
+              <article>
+                <div class="section-description">
+                  <p>
+                    My name  is Anton Pertsevoy and I am full-stack web developer.
+                  </p>
+                  <p>
+                    Responsible and well-organized person, easily in touch with everyone. My priority is freedom of thought, which allows to implement the most extraordinary solutions.
+                  </p>
+                  <p>
+                    I am in constant interaction with the development and everything connected with it.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <div id="skills-div">
+        <div id="skills-row" class="row">
+          <div class="section-part col-12 col-lg-6">
+            <div class="headers-div">
+              <h1>Skills</h1>
+              <article>
+                <div class="section-description">
+                  <p>
+                    The main area of my activity is front end and back end development.
+                  </p>
+                  <p>
+                    I use HTML, CSS, JS, jQuery, Bootstrap, React and Redux to create the client side of the web application.
+                  </p>
+                  <p>
+                    Also I create the server side of the web application with help of Node.js and its frameworks, such as Express, Socket.io etc. My stack includes MongoDB for manipulating with data and REST API for making requests.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="d-lg-block col-lg-6 p-5">
+            <div class="row">
+              <div class="col-6">
+                <div class="skills-column">
+                  <div class="skills-column-header">
+                    <i class="fas fa-code"></i>
+                    <h3>Front-end</h3>
+                  </div>
+                  <h5>Languages:</h5>
+                  <p>HTML, CSS, JS</p>
+                  <h5>Dev Tools:</h5>
+                  <ul>
+                    <li>Bootstrap</li>
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>jQuery</li>
+                    <li>Git</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="skills-column">
+                  <div class="skills-column-header">
+                    <i class="fas fa-server"></i>
+                    <h3>Back-end</h3>
+                  </div>
+                  <h5>Languages:</h5>
+                  <p>Node.js</p>
+                  <h5>Dev Tools:</h5>
+                  <ul>
+                    <li>Mongo.DB</li>
+                    <li>Express</li>
+                    <li>Socket.io</li>
+                    <li>REST</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio">
+      <div id="portfolio-div">
+        <div id="portfolio-row" class="row">
+          <div class="col-12 col-lg-6 order-1 order-lg-0">
+            <div class="row p-3">
+              <div class="folio-item col-12 col-lg-6 mb-3">
+                <div class="hidden-panel">
+                  <div class="hidden-panel-btn-div">
+                    <p class="hidden-paragraph">Web site for travellers</p>
+                    <button id="y-trip" class="show-preview btn btn-sm btn-outline-danger">Preview</button>
+                    <a class="btn btn-sm btn-outline-danger" href="https://your-trip.herokuapp.com/" target="_blank">Visit web page</a>
+                  </div>
+                </div>
+                <img src="./assets/imgs/1.png"/>
+              </div>
+              <div class="folio-item col-12 col-lg-6 mb-3">
+                <div class="hidden-panel">
+                  <div class="hidden-panel-btn-div">
+                    <p class="hidden-paragraph">Web chat in cyberpunk style</p>
+                    <button id="cyber-chat" class="show-preview btn btn-sm btn-outline-danger">Preview</button>
+                    <a class="btn btn-sm btn-outline-danger" href="https://cyberchat95.herokuapp.com/" target="_blank">Visit web page</a>
+                  </div>
+                </div>
+                <img src="./assets/imgs/2.png"/>
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                <img src="./assets/imgs/1.png"/>
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                <img src="./assets/imgs/2.png"/>
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                <img src="./assets/imgs/1.png"/>
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                <img src="./assets/imgs/2.png"/>
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                <img src="./assets/imgs/1.png"/>
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                <img src="./assets/imgs/2.png"/>
+              </div>
+            </div>
+          </div>
+          <div class="section-part col-12 col-lg-6 order-0 order-lg-1">
+            <div class="headers-div">
+              <h1>Portfolio</h1>
+              <article>
+                <div class="section-description">
+                  <p>
+                    Here are my works. You can go directly to the project page or see a preview.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="contacts-div">
+        <div id="contact-row" class="row">
+          <div class="section-part col-12 col-lg-6">
+            <div class="headers-div">
+              <h1>Contact me</h1>
+              <form action="mailto:antoxaalex@gmail.com"
+                    method="POST"
+                    enctype="multipart/form-data"
+                    name="EmailForm"
+              >
+                <div class="mb-3">
+                  <label for="nameInput" class="form-label">Name</label>
+                  <input type="text" size="19" class="form-control" id="nameInput" name="contact_name">
+                </div>
+                <div class="mb-3">
+                  <label for="emailInput" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="emailInput" name="contact_email">
+                </div>
+                <div class="mb-3">
+                  <label for="subjectInput" class="form-label">Subject</label>
+                  <input type="text" size="19" class="form-control" id="subjectInput" name="subject">
+                </div>
+                <div class="mb-3">
+                  <label for="messageInput" class="form-label">Message</label>
+                  <textarea class="form-control" id="messageInput" name="message" rows="6"></textarea>
+                </div>
+                <div class="text-center mb-3">
+                  <button class="btn btn-lg btn-class" type="submit" value="Submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="header-image-div" class="col-12 col-lg-6">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+  </body>
+</html>
