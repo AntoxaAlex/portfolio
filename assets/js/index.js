@@ -1,16 +1,63 @@
+//Create sections' offsets
 let mainOffset = $("#main-div .row").offset();
 let aboutOffset = $("#about-div").offset();
 let skillsOffset = $("#skills-div").offset();
 let portfolioOffset = $("#portfolio-div").offset();
 let contactOffset = $("#contact-row").offset();
 
+//Scroll to intro section
+$(".navbar-brand").on("click", function () {
+    $('html, body').animate({
+        scrollTop: mainOffset.top,
+        scrollLeft: mainOffset.left
+    });
+})
+//Scroll to about section
+$("#about-btn").on("click", function () {
+    $('html, body').animate({
+        scrollTop: aboutOffset.top,
+        scrollLeft: aboutOffset.left
+    });
+})
+//Scroll to skills section
+$("#skills-btn").on("click", function () {
+    $('html, body').animate({
+        scrollTop: skillsOffset.top,
+        scrollLeft: skillsOffset.left
+    });
+})
+//Scroll to portfolio section
+$("#folio-btn").on("click", function () {
+    $('html, body').animate({
+        scrollTop: portfolioOffset.top,
+        scrollLeft: portfolioOffset.left
+    });
+})
+//Scroll to contact section
+$("#contact-btn").on("click", function () {
+    $('html, body').animate({
+        scrollTop: contactOffset.top,
+        scrollLeft: contactOffset.left
+    });
+})
+
+//Hide links menu
+$("#main_links a").on("click",function() {
+    $(".navbar-toggler").addClass("collapsed").attr("aria-expanded", false);
+    $("#navbarSupportedContent").removeClass("show");
+});
+
+//Hide links description
 $("#main_links").on("mouseenter mouseleave", "li",function(){
     $(this).toggleClass("showParagraph");
 })
+
+//Hide portfolio panels
 $(".folio-item").on("mouseenter mouseleave",function(){
     $(this).toggleClass("showPanel",1000);
 })
 
+//Set src attribute to iframe and display modal div
 $(".show-preview").on("click",function () {
     const id = $(this).attr("id")
     let link = "";
@@ -30,50 +77,15 @@ $(".show-preview").on("click",function () {
     }
 })
 
+//Close modal and remove iframe src attribute
 $("#close-iframe-btn").on("click",function () {
     $("#modal-div").removeClass("show-modal-div").addClass("modal-body")
     $("iframe").removeAttr("src")
 })
 
-$(".navbar-brand").on("click", function () {
-    $('html, body').animate({
-        scrollTop: mainOffset.top,
-        scrollLeft: mainOffset.left
-    });
-})
-$("#about-btn").on("click", function () {
-    $('html, body').animate({
-        scrollTop: aboutOffset.top,
-        scrollLeft: aboutOffset.left
-    });
-})
-$("#skills-btn").on("click", function () {
-    $('html, body').animate({
-        scrollTop: skillsOffset.top,
-        scrollLeft: skillsOffset.left
-    });
-})
-$("#folio-btn").on("click", function () {
-    $('html, body').animate({
-        scrollTop: portfolioOffset.top,
-        scrollLeft: portfolioOffset.left
-    });
-})
-$("#contact-btn").on("click", function () {
-    $('html, body').animate({
-        scrollTop: contactOffset.top,
-        scrollLeft: contactOffset.left
-    });
-})
-
-//Hide links menu
-$("#main_links a").on("click",function() {
-    $(".navbar-toggler").addClass("collapsed").attr("aria-expanded", false);
-    $("#navbarSupportedContent").removeClass("show");
-});
 
 
-//Typing and fade animation
+//Typing and fade animation,
 $(document).ready(function () {
     console.log("Document is ready")
     //Array with text to type
