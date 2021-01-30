@@ -78,7 +78,7 @@ $(document).ready(function () {
     console.log("Document is ready")
     //Array with text to type
     let textArr = ["Hi,","I am Anton,","full-stack web developer"]
-    // Type one text in the typwriter
+    // Type one text in the typewriter
     // Keeps calling itself until the text is finished
     function typeWriter(text,headIndex,i,fnCallback) {
         // Check if text isn't finished yet
