@@ -68,6 +68,9 @@ $(".show-preview").on("click",function () {
         case "cyber-chat":
             link = "https://cyberchat95.herokuapp.com/"
             break;
+        case "fullstack-generator":
+            link = "https://fullstack-generator.herokuapp.com/"
+            break;
         default:
             alert("No such project")
     }
