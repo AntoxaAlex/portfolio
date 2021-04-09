@@ -7,8 +7,6 @@ Portfolio is a simple web site that contain my own projects,
 
 -**HTML, CSS, Bootstrap, jQuery** 
 
--**Database:** MongoDB
-
 ## Installation
 **Get the code**
 ```
